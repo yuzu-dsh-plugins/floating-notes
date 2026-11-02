@@ -1,0 +1,6 @@
+# Bundle patch: the one Host row this bundle contributes.
+# The Client half owns all rendering and state; the Host half is an empty shell
+# so the bundle has an activatable entry.
+- insert:
+    - id: floating-notes
+      name: 'dsh-floating-notes'

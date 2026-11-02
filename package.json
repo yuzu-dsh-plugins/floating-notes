@@ -1,0 +1,69 @@
+{
+  "name": "dsh-floating-notes",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A floating memo page in the bottom-right corner of the web GUI: a Notion-style TipTap editor with markdown shortcuts, to-dos, undo and auto-save, shared by every session.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuzu-dsh-plugins/floating-notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuzu-dsh-plugins/floating-notes/issues"
+  },
+  "homepage": "https://github.com/yuzu-dsh-plugins/floating-notes#readme",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "build.mjs",
+    "src/**/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node checks/render.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "notes",
+    "memo",
+    "notion",
+    "tiptap",
+    "plugin"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@tiptap/core": "^2.11.5",
+    "@tiptap/extension-placeholder": "^2.11.5",
+    "@tiptap/extension-task-item": "^2.11.5",
+    "@tiptap/extension-task-list": "^2.11.5",
+    "@tiptap/pm": "^2.11.5",
+    "@tiptap/starter-kit": "^2.11.5",
+    "esbuild": "^0.24.2",
+    "jsdom": "^25.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
