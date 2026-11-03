@@ -7,11 +7,27 @@ DeepSeek Harness 网页端的悬浮备忘录。点击右下角的圆形按钮，
 
 ## 安装
 
+### 从 GitHub 安装
+
+在 DeepSeek Harness 侧栏打开 **插件 → 添加插件**，将下面的地址粘贴到安装输入框。
+
+```text
+git+https://github.com/yuzu-dsh-plugins/floating-notes.git
+```
+
+点击 **安装**，完成后选择 **立即启用**。如果安装界面提示重启，请重启 DeepSeek Harness。
+
+启用后，点击右下角的悬浮按钮即可打开备忘录。
+
+### 从本地目录安装
+
+在 GitHub 仓库页面选择 **Code → Download ZIP** 并解压，也可以用下面的命令克隆仓库。
+
 ```sh
 git clone https://github.com/yuzu-dsh-plugins/floating-notes.git
 ```
 
-在 DSH 插件管理器中，将克隆下来的目录安装为本地 bundle。如果当前会话提供
+打开 **添加插件**，输入解压或克隆后目录的绝对路径。如果当前会话提供
 `plugin_manager` 工具，可通过 `install_bundle` 指定该目录的绝对路径。
 注册的 bundle 名称为 `dsh-floating-notes`。仓库已包含构建好的 `client.js`，
 可以直接安装。

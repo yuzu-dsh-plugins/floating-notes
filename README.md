@@ -8,13 +8,31 @@ per page.
 
 ## Installation
 
+### Install from GitHub
+
+Open **Plugins → Add plugin** in the DeepSeek Harness sidebar and paste this
+address into the install field.
+
+```text
+git+https://github.com/yuzu-dsh-plugins/floating-notes.git
+```
+
+Select **Install**, then **Enable now** when installation finishes. Restart
+DeepSeek Harness if the installer asks you to.
+
+After enabling the plugin, click the floating button in the bottom-right corner.
+
+### Install from a local directory
+
+On GitHub, choose **Code → Download ZIP** and extract it, or clone the repository.
+
 ```sh
 git clone https://github.com/yuzu-dsh-plugins/floating-notes.git
 ```
 
-Install the cloned directory as a local bundle in the DSH plugin manager. If
-your session exposes the `plugin_manager` tool, run `install_bundle` with the
-directory's absolute path. The bundle is registered as `dsh-floating-notes`.
+Open **Add plugin** and enter the absolute path of the extracted or cloned
+directory. If your session exposes the `plugin_manager` tool, run
+`install_bundle` with the directory's absolute path. The bundle is registered as `dsh-floating-notes`.
 The repository includes the built `client.js`, so you can install it directly.
 
 ## What it is
